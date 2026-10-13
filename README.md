@@ -32,11 +32,11 @@ Run [CloudCLI](https://github.com/siteboon/claudecodeui) (Claude Code UI) on an 
 | `ANTHROPIC_API_KEY` | — | Optional. Claude API key instead of logging in |
 | `CLAUDE_CODE_OAUTH_TOKEN` | — | Optional. Token from `claude setup-token` |
 | `OPENAI_API_KEY` | — | Optional. For Codex |
-| `OPENROUTER_API_KEY` | — | Optional. For OpenCode; one key gives access to many models |
+| `OPENROUTER_API_KEY` | — | Optional. For OpenCode. One key gives access to many models |
 
 Public networking should point at port `8080`, the port Railway gives the service by default.
 
-The login is only created on the first boot. Changing `CLOUDCLI_PASSWORD` later does not change it; use CloudCLI's settings instead.
+The login is only created on the first boot. Changing `CLOUDCLI_PASSWORD` later does not change it. Use CloudCLI's settings instead.
 
 ## Storage
 
