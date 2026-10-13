@@ -50,7 +50,7 @@ start
 code="$(curl -s -o /dev/null -w '%{http_code}' -X POST -H 'Content-Type: application/json' \
   -d '{"username":"intruder","password":"intruder123"}' "http://127.0.0.1:$PORT/api/auth/register")"
 [ "$code" = "403" ] || fail "a second account could be registered (HTTP $code)"
-curl -fsS "http://127.0.0.1:$PORT/" | grep -qi '<html' || fail "web UI did not load"
+curl -fsS "http://127.0.0.1:$PORT/" | grep -i '<html' >/dev/null || fail "web UI did not load"
 [ "$(docker exec "$NAME" ps -o user= -p 1 | tr -d ' ')" = "coder" ] \
   || fail "server is not running as the unprivileged user"
 
