@@ -2,7 +2,7 @@
 
 Run [CloudCLI](https://github.com/siteboon/claudecodeui) (Claude Code UI) on an always-on Railway server and use Claude Code or Codex from any browser, including your phone.
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/TEMPLATE_CODE?referralCode=REFERRAL_CODE&utm_medium=integration&utm_source=template&utm_campaign=cloudcli)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/cloudcli-claude-code-ui?utm_medium=integration&utm_source=template&utm_campaign=cloudcli)
 
 ## What you get
 
@@ -31,6 +31,7 @@ Run [CloudCLI](https://github.com/siteboon/claudecodeui) (Claude Code UI) on an 
 | `ANTHROPIC_API_KEY` | — | Optional. Claude API key instead of logging in |
 | `CLAUDE_CODE_OAUTH_TOKEN` | — | Optional. Token from `claude setup-token` |
 | `OPENAI_API_KEY` | — | Optional. For Codex |
+| `PORT` | `3001` | Must match the public networking port |
 
 The login is only created on the first boot. Changing `CLOUDCLI_PASSWORD` later does not change it; use CloudCLI's settings instead.
 
