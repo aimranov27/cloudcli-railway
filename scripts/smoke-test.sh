@@ -20,7 +20,7 @@ trap cleanup EXIT
 fail() { echo "FAIL: $*" >&2; docker logs "$NAME" 2>&1 | tail -n 50 >&2 || true; exit 1; }
 
 start() {
-  docker run -d --name "$NAME" -p "$PORT:3001" -v "$VOLUME:/data" \
+  docker run -d --name "$NAME" -p "$PORT:8080" -v "$VOLUME:/data" \
     -e CLOUDCLI_USERNAME="$USERNAME" -e CLOUDCLI_PASSWORD="$PASSWORD" "$IMAGE" >/dev/null
   for _ in $(seq 1 90); do
     curl -fsS "http://127.0.0.1:$PORT/health" >/dev/null 2>&1 && return 0

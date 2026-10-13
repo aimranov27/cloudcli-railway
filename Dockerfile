@@ -32,8 +32,8 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 ENV DATA_DIR=/data \
     DISABLE_AUTOUPDATER=1 \
     OPENCODE_DISABLE_AUTOUPDATE=1 \
-    PORT=3001 \
+    PORT=8080 \
     NODE_ENV=production
 
-EXPOSE 3001
+EXPOSE 8080
 ENTRYPOINT ["docker-entrypoint.sh"]

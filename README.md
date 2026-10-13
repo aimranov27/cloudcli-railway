@@ -32,7 +32,8 @@ Run [CloudCLI](https://github.com/siteboon/claudecodeui) (Claude Code UI) on an 
 | `ANTHROPIC_API_KEY` | — | Optional. Claude API key instead of logging in |
 | `CLAUDE_CODE_OAUTH_TOKEN` | — | Optional. Token from `claude setup-token` |
 | `OPENAI_API_KEY` | — | Optional. For Codex |
-| `PORT` | `3001` | Must match the public networking port |
+
+Public networking should point at port `8080`, the port Railway gives the service by default.
 
 The login is only created on the first boot. Changing `CLOUDCLI_PASSWORD` later does not change it; use CloudCLI's settings instead.
 

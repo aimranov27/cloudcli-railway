@@ -75,6 +75,6 @@ if [ ! -f "$SEED_MARKER" ]; then
 fi
 
 export HOST=0.0.0.0
-export SERVER_PORT="${PORT:-3001}"
+export SERVER_PORT="${PORT:-8080}"
 log "Starting CloudCLI $(cloudcli version 2>/dev/null | tail -n1) on port $SERVER_PORT"
 exec cloudcli start "$@"
