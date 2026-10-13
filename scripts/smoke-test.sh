@@ -39,7 +39,7 @@ if [ -z "${SKIP_BUILD:-}" ]; then
 fi
 
 echo "== versions"
-docker run --rm --entrypoint sh "$IMAGE" -c 'cloudcli version; claude --version; codex --version'
+docker run --rm --entrypoint sh "$IMAGE" -c 'cloudcli version; claude --version; codex --version; opencode --version'
 
 echo "== first boot"
 start

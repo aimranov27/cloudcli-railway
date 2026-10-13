@@ -22,7 +22,7 @@ if [ "$(id -u)" = 0 ]; then
   exec gosu "$APP_USER" "$0" "$@"
 fi
 
-# Everything CloudCLI, Claude Code and Codex write (auth.db, ~/.claude,
+# Everything CloudCLI and the agents write (auth.db, ~/.claude,
 # ~/.codex, projects) lives under HOME, so put HOME on the volume.
 export HOME="$DATA_DIR/home"
 mkdir -p "$HOME/.cloudcli" "$HOME/projects"

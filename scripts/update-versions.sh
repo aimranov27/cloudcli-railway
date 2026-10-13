@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Bumps the pinned versions in the Dockerfile to the latest npm releases.
 #
-# CloudCLI is bumped as soon as it releases. Claude Code and Codex release
+# CloudCLI is bumped as soon as it releases. Claude Code, Codex and OpenCode release
 # almost daily, so they are only bumped alongside a CloudCLI release, on
 # Mondays, or when FORCE_ALL=1. That keeps "update available" notices for
 # template users to roughly one a week.
@@ -32,6 +32,7 @@ cloudcli_changed="$changes"
 if [ -n "$cloudcli_changed" ] || [ "$(date -u +%u)" = 1 ] || [ "${FORCE_ALL:-}" = 1 ]; then
   check CLAUDE_CODE_VERSION @anthropic-ai/claude-code "Claude Code"
   check CODEX_VERSION @openai/codex Codex
+  check OPENCODE_VERSION opencode-ai OpenCode
 fi
 
 printf '%s' "$changes"

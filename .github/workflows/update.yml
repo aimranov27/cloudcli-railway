@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       force_all:
-        description: "Also bump Claude Code and Codex even if CloudCLI did not change"
+        description: "Also bump Claude Code, Codex and OpenCode even if CloudCLI did not change"
         type: boolean
         default: false
 
