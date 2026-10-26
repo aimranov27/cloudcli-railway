@@ -4,9 +4,9 @@
 FROM node:22-bookworm-slim
 
 ARG CLOUDCLI_VERSION=1.37.5
-ARG CLAUDE_CODE_VERSION=2.1.303
-ARG CODEX_VERSION=0.163.0
-ARG OPENCODE_VERSION=1.19.3
+ARG CLAUDE_CODE_VERSION=2.1.310
+ARG CODEX_VERSION=0.164.0
+ARG OPENCODE_VERSION=1.19.4
 
 # Build tools are needed for native modules (node-pty, better-sqlite3, bcrypt).
 # The rest is what coding agents commonly expect to find on the box.
