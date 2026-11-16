@@ -3,9 +3,9 @@
 # (.github/workflows/update.yml) bumps them automatically after a smoke test.
 FROM node:22-bookworm-slim
 
-ARG CLOUDCLI_VERSION=1.37.8
-ARG CLAUDE_CODE_VERSION=2.1.319
-ARG CODEX_VERSION=0.167.0
+ARG CLOUDCLI_VERSION=1.37.9
+ARG CLAUDE_CODE_VERSION=2.1.325
+ARG CODEX_VERSION=0.169.0
 ARG OPENCODE_VERSION=1.19.5
 
 # Build tools are needed for native modules (node-pty, better-sqlite3, bcrypt).
